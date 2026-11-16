@@ -4,7 +4,7 @@
   "description": "Clean, practical code snippets for React, JavaScript, TypeScript, CSS and Java. Type `lt` to see them all.",
   "publisher": "learntime",
   "icon": "icon.png",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "categories": [
     "Snippets"
