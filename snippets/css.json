@@ -1,0 +1,238 @@
+{
+  "Flex Center": {
+    "prefix": "flexc",
+    "description": "Center content with flexbox",
+    "body": [
+      "display: flex;",
+      "justify-content: center;",
+      "align-items: center;$0"
+    ]
+  },
+  "Flex Row": {
+    "prefix": "flex",
+    "description": "Flex row with gap",
+    "body": [
+      "display: flex;",
+      "flex-direction: ${1|row,column,row-reverse,column-reverse|};",
+      "gap: ${2:1rem};$0"
+    ]
+  },
+  "Grid Columns": {
+    "prefix": "grid",
+    "description": "Grid with equal columns",
+    "body": [
+      "display: grid;",
+      "grid-template-columns: repeat(${1:3}, 1fr);",
+      "gap: ${2:1rem};$0"
+    ]
+  },
+  "Grid Auto Fit": {
+    "prefix": "gridauto",
+    "description": "Responsive grid that wraps automatically",
+    "body": [
+      "display: grid;",
+      "grid-template-columns: repeat(auto-fit, minmax(${1:200px}, 1fr));",
+      "gap: ${2:1rem};$0"
+    ]
+  },
+  "Grid Center": {
+    "prefix": "gridc",
+    "description": "Center content with grid",
+    "body": [
+      "display: grid;",
+      "place-items: center;$0"
+    ]
+  },
+  "Media Query": {
+    "prefix": "mq",
+    "description": "Media query (min-width)",
+    "body": [
+      "@media (min-width: ${1:768px}) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Dark Mode": {
+    "prefix": "dark",
+    "description": "prefers-color-scheme dark media query",
+    "body": [
+      "@media (prefers-color-scheme: dark) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "CSS Variables": {
+    "prefix": "vars",
+    "description": "Custom properties on :root",
+    "body": [
+      ":root {",
+      "  --${1:color-primary}: ${2:#3b82f6};$0",
+      "}"
+    ]
+  },
+  "Reset": {
+    "prefix": "reset",
+    "description": "Modern CSS reset",
+    "body": [
+      "*,",
+      "*::before,",
+      "*::after {",
+      "  box-sizing: border-box;",
+      "}",
+      "",
+      "* {",
+      "  margin: 0;",
+      "}",
+      "",
+      "html {",
+      "  -webkit-text-size-adjust: none;",
+      "  text-size-adjust: none;",
+      "}",
+      "",
+      "body {",
+      "  min-height: 100vh;",
+      "  font-family:",
+      "    system-ui,",
+      "    -apple-system,",
+      "    \"Segoe UI\",",
+      "    Roboto,",
+      "    \"Helvetica Neue\",",
+      "    Arial,",
+      "    \"Noto Sans\",",
+      "    sans-serif,",
+      "    \"Apple Color Emoji\",",
+      "    \"Segoe UI Emoji\";",
+      "  line-height: 1.5;",
+      "}",
+      "",
+      "img,",
+      "picture,",
+      "video,",
+      "canvas,",
+      "svg {",
+      "  display: block;",
+      "  max-width: 100%;",
+      "}",
+      "",
+      "input,",
+      "button,",
+      "textarea,",
+      "select {",
+      "  font: inherit;",
+      "}",
+      "",
+      "p,",
+      "h1,",
+      "h2,",
+      "h3,",
+      "h4,",
+      "h5,",
+      "h6 {",
+      "  overflow-wrap: break-word;",
+      "}",
+      "",
+      "h1,",
+      "h2,",
+      "h3,",
+      "h4,",
+      "h5,",
+      "h6 {",
+      "  text-wrap: balance;",
+      "}",
+      "",
+      "p {",
+      "  text-wrap: pretty;",
+      "}",
+      "",
+      "ul[role=\"list\"],",
+      "ol[role=\"list\"] {",
+      "  list-style: none;",
+      "  padding: 0;",
+      "}",
+      "",
+      "@media (prefers-reduced-motion: reduce) {",
+      "  *,",
+      "  *::before,",
+      "  *::after {",
+      "    animation-duration: 0.01ms !important;",
+      "    animation-iteration-count: 1 !important;",
+      "    transition-duration: 0.01ms !important;",
+      "    scroll-behavior: auto !important;",
+      "  }",
+      "}$0"
+    ]
+  },
+  "Absolute Center": {
+    "prefix": "absc",
+    "description": "Center with absolute positioning",
+    "body": [
+      "position: absolute;",
+      "top: 50%;",
+      "left: 50%;",
+      "transform: translate(-50%, -50%);$0"
+    ]
+  },
+  "Truncate Text": {
+    "prefix": "truncate",
+    "description": "Single-line text truncation with ellipsis",
+    "body": [
+      "overflow: hidden;",
+      "white-space: nowrap;",
+      "text-overflow: ellipsis;$0"
+    ]
+  },
+  "Line Clamp": {
+    "prefix": "clamp",
+    "description": "Multi-line text clamp",
+    "body": [
+      "display: -webkit-box;",
+      "-webkit-line-clamp: ${1:3};",
+      "-webkit-box-orient: vertical;",
+      "overflow: hidden;$0"
+    ]
+  },
+  "Transition": {
+    "prefix": "trans",
+    "description": "Transition",
+    "body": "transition: ${1:all} ${2:0.3s} ${3|ease,ease-in,ease-out,ease-in-out,linear|};$0"
+  },
+  "Keyframes": {
+    "prefix": "kf",
+    "description": "Keyframes animation",
+    "body": [
+      "@keyframes ${1:name} {",
+      "  from {",
+      "    $2",
+      "  }",
+      "  to {",
+      "    $3",
+      "  }",
+      "}$0"
+    ]
+  },
+  "Visually Hidden": {
+    "prefix": "sr",
+    "description": "Hide visually but keep for screen readers",
+    "body": [
+      "position: absolute;",
+      "width: 1px;",
+      "height: 1px;",
+      "padding: 0;",
+      "margin: -1px;",
+      "overflow: hidden;",
+      "clip: rect(0, 0, 0, 0);",
+      "white-space: nowrap;",
+      "border: 0;$0"
+    ]
+  },
+  "Box Shadow": {
+    "prefix": "shadow",
+    "description": "Soft box shadow",
+    "body": "box-shadow: 0 ${1:4px} ${2:12px} rgba(0, 0, 0, ${3:0.1});$0"
+  },
+  "Font Stack": {
+    "prefix": "font",
+    "description": "System font stack",
+    "body": "font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;$0"
+  }
+}

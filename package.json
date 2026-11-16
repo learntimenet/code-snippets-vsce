@@ -1,0 +1,52 @@
+{
+  "name": "learntime-code-snippets",
+  "displayName": "Code Snippets: React, CSS, Java, JavaScript & More",
+  "description": "Clean, practical code snippets for React, JavaScript, TypeScript, CSS and Java. Type `lt` to see them all.",
+  "publisher": "learntime",
+  "icon": "icon.png",
+  "version": "0.1.0",
+  "license": "MIT",
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "snippets",
+    "react",
+    "javascript",
+    "typescript",
+    "css",
+    "java",
+    "hooks",
+    "es6"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/learntimenet/code-snippets-vsce.git"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-snippets.js",
+    "readme": "node scripts/generate-readme.js",
+    "package": "npm run validate && npm run readme && vsce package",
+    "publish": "npm run validate && npm run readme && vsce publish"
+  },
+  "contributes": {
+    "snippets": [
+      { "language": "javascript", "path": "./snippets/javascript.json" },
+      { "language": "javascriptreact", "path": "./snippets/javascript.json" },
+      { "language": "typescript", "path": "./snippets/javascript.json" },
+      { "language": "typescriptreact", "path": "./snippets/javascript.json" },
+      { "language": "javascriptreact", "path": "./snippets/react.json" },
+      { "language": "typescriptreact", "path": "./snippets/react.json" },
+      { "language": "css", "path": "./snippets/css.json" },
+      { "language": "scss", "path": "./snippets/css.json" },
+      { "language": "less", "path": "./snippets/css.json" },
+      { "language": "java", "path": "./snippets/java.json" }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.0"
+  },
+  "engines": {
+    "vscode": "^1.105.0"
+  }
+}
