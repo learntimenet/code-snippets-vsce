@@ -52,8 +52,6 @@ let md = `# Code Snippets
 
 Clean, practical code snippets for React, JavaScript, TypeScript, CSS and Java.
 
-Every snippet starts with \`lt\`. Type \`lt\` in a supported file to see them all, then press <kbd>Tab</kbd> to jump between placeholders.
-
 ## Contents
 
 ${sections.map((s) => `- [${s.title}](#${s.title.toLowerCase().replace(/[^a-z0-9 -]/g, "").replace(/ /g, "-")}) (${s.files})`).join("\n")}
