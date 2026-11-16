@@ -1,10 +1,10 @@
 {
   "name": "learntime-code-snippets",
-  "displayName": "Code Snippets: React, CSS, Java, JavaScript & More",
+  "displayName": "Code Snippets",
   "description": "Clean, practical code snippets for React, JavaScript, TypeScript, CSS and Java. Type `lt` to see them all.",
   "publisher": "learntime",
   "icon": "icon.png",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "categories": [
     "Snippets"
